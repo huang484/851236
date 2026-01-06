@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大漢風雲：漢朝歷史文化學習網</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #fdfaf6;
+            color: #332b2b;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1599708139500-11c217a59ee5?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .tab-active {
+            border-bottom: 4px solid #b91c1c;
+            color: #b91c1c;
+        }
+    </style>
+</head>
+<body class="bg-stone-50">
+
+    <!-- Header -->
+    <header class="hero-bg h-64 flex flex-col items-center justify-center text-white shadow-lg">
+        <h1 class="text-5xl font-bold mb-2 tracking-widest">大漢風雲</h1>
+        <p class="text-xl font-light">探尋四百年的輝煌盛世：皇帝、文化、飲食與幣制</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto flex justify-around p-4 text-lg font-bold">
+            <button onclick="showSection('emperors')" class="nav-btn tab-active px-4 py-2 hover:text-red-700">歷代皇帝</button>
+            <button onclick="showSection('culture')" class="nav-btn px-4 py-2 hover:text-red-700">輝煌文化</button>
+            <button onclick="showSection('food')" class="nav-btn px-4 py-2 hover:text-red-700">漢代飲食</button>
+            <button onclick="showSection('currency')" class="nav-btn px-4 py-2 hover:text-red-700">幣制演變</button>
+            <button onclick="showSection('quiz')" class="nav-btn px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-800">知識測驗</button>
+        </div>
+    </nav>
+
+    <!-- Content Sections -->
+    <main class="max-w-6xl mx-auto p-6 min-h-screen">
+        
+        <!-- Section: Emperors -->
+        <section id="emperors" class="content-section">
+            <h2 class="text-3xl border-l-8 border-red-700 pl-4 mb-8 font-bold">漢朝歷代皇帝</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <h3 class="text-2xl text-red-800 font-bold mb-4">西漢（前202年－8年）</h3>
+                    <ul class="space-y-4">
+                        <li class="border-b pb-2"><strong>漢高祖 劉邦：</strong> 開國皇帝，確立郡國並行制。</li>
+                        <li class="border-b pb-2"><strong>文景之治：</strong> 漢文帝與漢景帝時期，推行與民休息，為盛世奠基。</li>
+                        <li class="border-b pb-2"><strong>漢武帝 劉徹：</strong> 漢朝巔峰。罷黜百家、獨尊儒術，開闢絲路。</li>
+                        <li class="border-b pb-2"><strong>漢宣帝 劉詢：</strong> 漢朝國力最強的中興之主。</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <h3 class="text-2xl text-red-800 font-bold mb-4">東漢（25年－220年）</h3>
+                    <ul class="space-y-4">
+                        <li class="border-b pb-2"><strong>漢光武帝 劉秀：</strong> 掃平群雄，創立「光武中興」。</li>
+                        <li class="border-b pb-2"><strong>明章之治：</strong> 漢明帝與漢章帝時期，佛教傳入中國。</li>
+                        <li class="border-b pb-2"><strong>漢獻帝 劉協：</strong> 漢末最後一位皇帝，受權臣挾持，最終禪讓曹魏。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Culture -->
+        <section id="culture" class="content-section hidden">
+            <h2 class="text-3xl border-l-8 border-red-700 pl-4 mb-8 font-bold">漢代輝煌文化</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-stone-100 p-6 rounded-lg text-center card-hover shadow">
+                    <div class="text-4xl mb-4">📜</div>
+                    <h4 class="text-xl font-bold mb-2">儒學正統</h4>
+                    <p class="text-stone-600">武帝後儒家成為正統，影響後世兩千年的倫理與政治。</p>
+                </div>
+                <div class="bg-stone-100 p-6 rounded-lg text-center card-hover shadow">
+                    <div class="text-4xl mb-4">🖋️</div>
+                    <h4 class="text-xl font-bold mb-2">史學巨著</h4>
+                    <p class="text-stone-600">司馬遷撰寫《史記》，是中國第一部紀傳體通史。</p>
+                </div>
+                <div class="bg-stone-100 p-6 rounded-lg text-center card-hover shadow">
+                    <div class="text-4xl mb-4">🛠️</div>
+                    <h4 class="text-xl font-bold mb-2">科技進步</h4>
+                    <p class="text-stone-600">蔡倫改良造紙術；張衡發明地動儀與渾天儀。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Food -->
+        <section id="food" class="content-section hidden">
+            <h2 class="text-3xl border-l-8 border-red-700 pl-4 mb-8 font-bold">漢代飲食文化</h2>
+            <div class="bg-white p-8 rounded-xl shadow-md border border-stone-200">
+                <div class="flex flex-wrap gap-8 items-center">
+                    <div class="flex-1">
+                        <p class="text-lg leading-relaxed mb-4">漢朝是中國飲食史上的「餐桌革命」。隨着張騫出使西域，許多新食材進入中原，徹底改變了中國人的味蕾。</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-orange-50 p-3 rounded border border-orange-200">
+                                <span class="font-bold">新增食材：</span> 葡萄、石榴、大蒜、胡桃、芝麻。
+                            </div>
+                            <div class="bg-orange-50 p-3 rounded border border-orange-200">
+                                <span class="font-bold">主食變革：</span> 磨灶普及，麵食（餅）開始流行。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-64 bg-stone-200 h-48 rounded flex items-center justify-center italic text-stone-500">
+                        [漢代庖廚圖示意]
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Currency -->
+        <section id="currency" class="content-section hidden">
+            <h2 class="text-3xl border-l-8 border-red-700 pl-4 mb-8 font-bold">幣制演變</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white border-collapse shadow-sm">
+                    <thead>
+                        <tr class="bg-red-800 text-white">
+                            <th class="p-4 text-left">時期</th>
+                            <th class="p-4 text-left">主要貨幣</th>
+                            <th class="p-4 text-left">特色</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-stone-700">
+                        <tr class="border-b">
+                            <td class="p-4 font-bold">漢初</td>
+                            <td class="p-4">莢錢、半兩錢</td>
+                            <td class="p-4">私人鑄造嚴重，導致通貨膨脹。</td>
+                        </tr>
+                        <tr class="border-b bg-stone-50">
+                            <td class="p-4 font-bold">漢武帝</td>
+                            <td class="p-4 text-red-700 font-bold">五銖錢</td>
+                            <td class="p-4">貨幣權收回中央，形制精美，影響深遠。</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-4 font-bold">王莽新朝</td>
+                            <td class="p-4">契刀、貝殼、布帛等</td>
+                            <td class="p-4">制度複雜混亂，導致經濟崩潰。</td>
+                        </tr>
+                        <tr class="border-b bg-stone-50">
+                            <td class="p-4 font-bold">東漢</td>
+                            <td class="p-4">復行五銖錢</td>
+                            <td class="p-4">由光武帝劉秀恢復，保持經濟穩定。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section: Quiz -->
+        <section id="quiz" class="content-section hidden">
+            <h2 class="text-3xl border-l-8 border-red-700 pl-4 mb-8 font-bold">大漢知識測驗</h2>
+            <div id="quiz-container" class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-700">
+                <!-- Quiz contents will be injected by JS -->
+            </div>
+            <div id="quiz-result" class="hidden bg-green-50 p-8 rounded-xl shadow-lg text-center">
+                <h3 class="text-2xl font-bold mb-4">測驗完成！</h3>
+                <p id="score-text" class="text-4xl text-red-700 font-bold mb-6"></p>
+                <button onclick="resetQuiz()" class="bg-red-700 text-white px-8 py-3 rounded-lg hover:bg-red-800 font-bold transition">重新測驗</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-800 text-white py-8 mt-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <p>© 2024 漢朝歷史學習網 - 學史以明智</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Navigation Logic
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('tab-active');
+            });
+            event.currentTarget.classList.add('tab-active');
+            window.scrollTo(0, 0);
+        }
+
+        // Quiz Logic
+        const quizData = [
+            { q: "漢朝的開國皇帝是誰？", a: ["劉備", "劉秀", "劉邦", "劉徹"], correct: 2 },
+            { q: "西漢時期「文景之治」主要推行的思想是？", a: ["法家思想", "黃老治術、與民休息", "獨尊儒術", "佛教教義"], correct: 1 },
+            { q: "哪位皇帝派遣張騫出使西域，開啟了絲綢之路？", a: ["漢高祖", "漢宣帝", "漢明帝", "漢武帝"], correct: 3 },
+            { q: "中國第一部紀傳體通史《史記》的作者是？", a: ["班固", "司馬遷", "司馬光", "蔡倫"], correct: 1 },
+            { q: "東漢蔡倫對文化的重大貢獻是？", a: ["發明地動儀", "改良造紙術", "發明指南針", "撰寫《漢書》"], correct: 1 },
+            { q: "下列哪種食材「不是」透過張騫出使西域引進的？", a: ["葡萄", "大蒜", "水稻", "石榴"], correct: 2 },
+            { q: "漢武帝時期確立的標準貨幣是？", a: ["半兩錢", "刀幣", "五銖錢", "貝幣"], correct: 2 },
+            { q: "「光武中興」是指哪位皇帝的功績？", a: ["漢文帝", "漢武帝", "漢宣帝", "漢光武帝"], correct: 3 },
+            { q: "東漢末年，漢獻帝最終將帝位禪讓給了誰？", a: ["曹操", "曹丕", "劉備", "孫權"], correct: 1 },
+            { q: "漢朝時期，佛教是在哪一個階段開始傳入中國的？", a: ["西漢初期", "王莽時期", "東漢明章之治時期", "三國時期"], correct: 2 }
+        ];
+
+        let currentQuizIndex = 0;
+        let score = 0;
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            const data = quizData[currentQuizIndex];
+            
+            container.innerHTML = `
+                <div class="mb-6">
+                    <span class="text-sm font-bold text-red-600">問題 ${currentQuizIndex + 1} / 10</span>
+                    <h3 class="text-2xl font-bold mt-2">${data.q}</h3>
+                </div>
+                <div class="space-y-3">
+                    ${data.a.map((option, index) => `
+                        <button onclick="checkAnswer(${index})" class="w-full text-left p-4 border-2 border-stone-200 rounded-xl hover:bg-stone-50 hover:border-red-700 transition">
+                            ${option}
+                        </button>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function checkAnswer(selectedIndex) {
+            if (selectedIndex === quizData[currentQuizIndex].correct) {
+                score++;
+            }
+            
+            currentQuizIndex++;
+            if (currentQuizIndex < quizData.length) {
+                renderQuiz();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+            document.getElementById('score-text').innerText = `您的得分：${score * 10} / 100`;
+        }
+
+        function resetQuiz() {
+            currentQuizIndex = 0;
+            score = 0;
+            document.getElementById('quiz-container').classList.remove('hidden');
+            document.getElementById('quiz-result').classList.add('hidden');
+            renderQuiz();
+        }
+
+        // Initialize quiz on load
+        window.onload = renderQuiz;
+    </script>
+</body>
+</html>
